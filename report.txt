@@ -1,0 +1,52 @@
+TensorFlow 2.0 Upgrade Script
+-----------------------------
+Converted 1 files
+Detected 2 issues that require attention
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+File: ./Traffic_Sign_Classifier.ipynb
+--------------------------------------------------------------------------------
+./Traffic_Sign_Classifier.ipynb:166:11: ERROR: Using member tf.contrib.layers.flatten in deprecated module tf.contrib. tf.contrib.layers.flatten cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+./Traffic_Sign_Classifier.ipynb:242:4: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+================================================================================
+Detailed log follows:
+
+================================================================================
+--------------------------------------------------------------------------------
+Processing file './Traffic_Sign_Classifier.ipynb'
+ outputting to './Traffic_Sign_Classifier.ipynb'
+--------------------------------------------------------------------------------
+
+132:25: INFO: Renamed 'tf.truncated_normal' to 'tf.random.truncated_normal'
+137:18: INFO: Added keywords to args of function 'tf.nn.conv2d'
+137:18: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+148:16: INFO: Added keywords to args of function 'tf.nn.max_pool'
+148:16: INFO: Renamed keyword argument for tf.nn.max_pool from value to input
+148:16: INFO: Renamed 'tf.nn.max_pool' to 'tf.nn.max_pool2d'
+152:31: INFO: Renamed 'tf.truncated_normal' to 'tf.random.truncated_normal'
+156:18: INFO: Added keywords to args of function 'tf.nn.conv2d'
+156:18: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+163:16: INFO: Added keywords to args of function 'tf.nn.max_pool'
+163:16: INFO: Renamed keyword argument for tf.nn.max_pool from value to input
+163:16: INFO: Renamed 'tf.nn.max_pool' to 'tf.nn.max_pool2d'
+166:11: ERROR: Using member tf.contrib.layers.flatten in deprecated module tf.contrib. tf.contrib.layers.flatten cannot be converted automatically. tf.contrib will not be distributed with TensorFlow 2.0, please consider an alternative in non-contrib TensorFlow, a community-maintained repository such as tensorflow/addons, or fork the required code.
+169:36: INFO: Renamed 'tf.truncated_normal' to 'tf.random.truncated_normal'
+178:35: INFO: Renamed 'tf.truncated_normal' to 'tf.random.truncated_normal'
+187:35: INFO: Renamed 'tf.truncated_normal' to 'tf.random.truncated_normal'
+201:4: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+202:4: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+207:16: INFO: Changing labels arg of tf.nn.softmax_cross_entropy_with_logits to tf.stop_gradient(labels). Please check this transformation.
+
+208:17: INFO: Added keywords to args of function 'tf.reduce_mean'
+209:12: INFO: Renamed 'tf.train.AdamOptimizer' to 'tf.compat.v1.train.AdamOptimizer'
+211:30: INFO: Added keywords to args of function 'tf.argmax'
+211:52: INFO: Added keywords to args of function 'tf.argmax'
+212:21: INFO: Added keywords to args of function 'tf.reduce_mean'
+213:8: INFO: Renamed 'tf.train.Saver' to 'tf.compat.v1.train.Saver'
+218:11: INFO: Renamed 'tf.get_default_session' to 'tf.compat.v1.get_default_session'
+224:5: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+225:13: INFO: Renamed 'tf.global_variables_initializer' to 'tf.compat.v1.global_variables_initializer'
+242:4: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+244:5: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+--------------------------------------------------------------------------------
+
